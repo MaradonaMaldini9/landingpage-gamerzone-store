@@ -1,0 +1,387 @@
+/* ===== Variables y reset ===== */
+:root {
+  --bg-principal: #0D0D0D;
+  --bg-secundaria: #1A1A1D;
+  --bg-tarjeta: #242428;
+  --bg-tarjeta-clara: #333338;
+  --texto-principal: #F5F5F5;
+  --texto-secundario: #B5B5B5;
+  --texto-muted: #888780;
+  --acento-primario: #7B2FF7;
+  --acento-secundario: #00F0FF;
+  --texto-sobre-acento: #04342C;
+  --radius: 8px;
+  --font-titulos: 'Rajdhani', 'Poppins', sans-serif;
+  --font-texto: 'Inter', 'Roboto', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-principal);
+  color: var(--texto-principal);
+  font-family: var(--font-texto);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-titulos);
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: var(--radius);
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+}
+
+.btn--primary {
+  background-color: var(--acento-primario);
+  color: #EEEDFE;
+}
+
+.btn--accent {
+  background-color: var(--acento-secundario);
+  color: var(--texto-sobre-acento);
+}
+
+.highlight {
+  color: var(--acento-secundario);
+}
+
+/* ===== Header ===== */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background-color: var(--bg-secundaria);
+  flex-wrap: wrap;
+}
+
+.header__logo {
+  font-family: var(--font-titulos);
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.header__nav {
+  display: flex;
+  gap: 30px;
+}
+
+.header__nav a {
+  font-size: 14px;
+  color: var(--texto-secundario);
+}
+
+.header__nav a:hover {
+  color: var(--acento-secundario);
+}
+
+/* ===== Hero ===== */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 60px 40px;
+  background-color: #1F1F23;
+  flex-wrap: wrap;
+}
+
+.hero__texto {
+  flex: 1;
+  min-width: 280px;
+}
+
+.hero__texto h1 {
+  font-size: 40px;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.hero__texto p {
+  color: var(--texto-secundario);
+  margin-bottom: 24px;
+}
+
+.hero__imagen {
+  flex: 1;
+  min-width: 280px;
+}
+
+.hero__imagen img {
+  border-radius: var(--radius);
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+/* ===== Catalogo ===== */
+.catalogo {
+  padding: 60px 40px;
+}
+
+.catalogo h2,
+.marcas h2,
+.creadores h2,
+.contacto h2 {
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+
+.catalogo__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.producto {
+  background-color: var(--bg-tarjeta);
+  border-radius: var(--radius);
+  padding: 16px;
+  position: relative;
+}
+
+.producto img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  margin-bottom: 12px;
+  background-color: var(--bg-tarjeta-clara);
+}
+
+.producto h3 {
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+.precio {
+  color: var(--acento-secundario);
+  font-weight: 600;
+}
+
+.badge {
+  display: inline-block;
+  background-color: var(--acento-primario);
+  color: #EEEDFE;
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-bottom: 8px;
+}
+
+/* ===== Ofertas ===== */
+.ofertas {
+  margin: 0 40px 60px;
+  background-color: #3C3489;
+  border-radius: var(--radius);
+  padding: 30px 40px;
+}
+
+.ofertas h2 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.ofertas p {
+  color: #CECBF6;
+  font-size: 14px;
+}
+
+/* ===== Marcas ===== */
+.marcas {
+  padding: 0 40px 60px;
+}
+
+.marcas__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  align-items: center;
+}
+
+.marcas__grid img {
+  background-color: var(--bg-tarjeta);
+  border-radius: var(--radius);
+  padding: 15px;
+  height: 60px;
+  object-fit: contain;
+  width: 100%;
+}
+
+/* ===== Creadores ===== */
+.creadores {
+  padding: 0 40px 60px;
+}
+
+.creadores__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.creadores__texto {
+  background-color: var(--bg-tarjeta);
+  border-radius: var(--radius);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.creadores__sub {
+  color: var(--texto-muted);
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.creadores__imagen img {
+  width: 100%;
+  height: 100%;
+  min-height: 140px;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+/* ===== Contacto / Formulario ===== */
+.contacto {
+  padding: 0 40px 60px;
+}
+
+.form {
+  background-color: var(--bg-secundaria);
+  border-radius: var(--radius);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form__fila {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.form__campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form__campo label {
+  font-size: 13px;
+  color: var(--texto-secundario);
+}
+
+input,
+select,
+textarea {
+  background-color: var(--bg-tarjeta-clara);
+  border: 1px solid transparent;
+  border-radius: 6px;
+  padding: 10px 14px;
+  color: var(--texto-principal);
+  font-family: var(--font-texto);
+  font-size: 14px;
+}
+
+textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--acento-secundario);
+}
+
+input.error,
+select.error,
+textarea.error {
+  border-color: #E24B4A;
+}
+
+.form__error {
+  font-size: 12px;
+  color: #F09595;
+  min-height: 14px;
+}
+
+.form__confirmacion {
+  font-size: 13px;
+  color: var(--acento-secundario);
+  min-height: 16px;
+}
+
+/* ===== Footer ===== */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 30px 40px;
+  background-color: var(--bg-secundaria);
+}
+
+.footer__marca {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.footer__contacto,
+.footer__copy {
+  font-size: 12px;
+  color: var(--texto-muted);
+}
+
+/* ===== Responsive (Media Queries) ===== */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .header__nav {
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero {
+    text-align: center;
+  }
+
+  .hero__texto h1 {
+    font-size: 30px;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GamerZone Store - Landing Page</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header__logo">GamerZone Store</div>
+    <nav class="header__nav">
+      <a href="#hero">Inicio</a>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#ofertas">Ofertas</a>
+      <a href="#marcas">Marcas</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a href="#catalogo" class="btn btn--primary">Ver catálogo</a>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero__texto">
+      <h1>Equípate para <span class="highlight">dominar el juego</span></h1>
+      <p>Productos y accesorios gamer de alto rendimiento</p>
+      <a href="#catalogo" class="btn btn--accent">Explorar productos</a>
+    </div>
+    <div class="hero__imagen">
+      <img src="assets/images/imagen1.jpg" alt="Setup gamer con monitor y periféricos RGB">
+    </div>
+  </section>
+
+  <!-- CATALOGO -->
+  <section class="catalogo" id="catalogo">
+    <h2>Catálogo de productos</h2>
+    <div class="catalogo__grid">
+
+      <article class="producto">
+        <img src="assets/images/imagen2.jpg" alt="Mouse gamer RGB">
+        <h3>Mouse gamer RGB</h3>
+        <p class="precio">S/ 129.90</p>
+      </article>
+
+      <article class="producto">
+        <img src="assets/images/imagen3.jpg" alt="Teclado mecánico gamer">
+        <h3>Teclado mecánico</h3>
+        <p class="precio">S/ 249.90</p>
+      </article>
+
+      <article class="producto">
+        <img src="assets/images/imagen4.jpg" alt="Monitor gamer 144Hz">
+        <h3>Monitor 144Hz</h3>
+        <span class="badge">144Hz</span>
+        <p class="precio">S/ 500.90</p>
+      </article>
+
+      <article class="producto">
+        <img src="assets/images/imagen5.jpg" alt="Silla ergonómica gamer">
+        <h3>Silla ergonómica</h3>
+        <p class="precio">S/ 599.90</p>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- OFERTAS -->
+  <section class="ofertas" id="ofertas">
+    <h2>-20% en monitores gamer esta semana</h2>
+    <p>Aprovecha antes que se acabe el stock</p>
+  </section>
+
+  <!-- MARCAS -->
+  <section class="marcas" id="marcas">
+    <h2>Marcas que trabajamos</h2>
+    <div class="marcas__grid">
+      <img src="assets/images/imagen6.png" alt="Logo Logitech G">
+      <img src="assets/images/imagen7.png" alt="Logo Razer">
+      <img src="assets/images/imagen8.png" alt="Logo HyperX">
+      <img src="assets/images/imagen9.png" alt="Logo Corsair">
+    </div>
+  </section>
+
+  <!-- CREADORES / EMPRESAS -->
+  <section class="creadores">
+    <h2>Para creadores y empresas</h2>
+    <div class="creadores__grid">
+      <div class="creadores__texto">
+        <p>Equipa tu setup de streaming o tu sala gamer</p>
+        <p class="creadores__sub">Cámaras, micrófonos, iluminación y más</p>
+      </div>
+      <div class="creadores__imagen">
+        <img src="assets/images/imagen10.jpg" alt="Setup de streaming con iluminación gamer">
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="contacto" id="contacto">
+    <h2>Contáctanos</h2>
+    <form class="form" id="formContacto" novalidate>
+
+      <div class="form__fila">
+        <div class="form__campo">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Nombre">
+          <span class="form__error" id="errorNombre"></span>
+        </div>
+
+        <div class="form__campo">
+          <label for="correo">Correo</label>
+          <input type="email" id="correo" name="correo" placeholder="Correo">
+          <span class="form__error" id="errorCorreo"></span>
+        </div>
+      </div>
+
+      <div class="form__campo">
+        <label for="tipoConsulta">Tipo de consulta</label>
+        <select id="tipoConsulta" name="tipoConsulta">
+          <option value="">Selecciona una opción</option>
+          <option value="cliente">Cliente individual</option>
+          <option value="institucion">Institución</option>
+        </select>
+        <span class="form__error" id="errorTipo"></span>
+      </div>
+
+      <div class="form__campo">
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" placeholder="Mensaje"></textarea>
+        <span class="form__error" id="errorMensaje"></span>
+      </div>
+
+      <button type="submit" class="btn btn--accent">Enviar</button>
+      <p class="form__confirmacion" id="confirmacionEnvio"></p>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div>
+      <p class="footer__marca">GamerZone Store</p>
+      <p class="footer__contacto">contacto@gamerzone.com · Redes sociales</p>
+    </div>
+    <p class="footer__copy">2026 GamerZone Store</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
